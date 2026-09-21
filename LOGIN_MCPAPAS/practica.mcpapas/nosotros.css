@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ------------------- Barra superior ----------------------*/
+.barra-superior{
+    background-color: rgb(0, 0, 0);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+.logo{
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+.opciones{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+.opciones a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+}
+/*Ocultar el chekbox*/
+#menu-toggle{
+    display: none;
+}
+.menu-icon{
+    display: none;
+    color: white;
+    cursor: pointer;
+}
+/*------ Pantalla chica - CELULAR --------*/
+@media(max-width: 600px){
+    .menu-icon{
+        display: block;
+    }
+    .opciones{
+        display: none;
+    }
+    #menu-toggle:checked ~ .opciones{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: black;
+        width: 100%;
+        padding: 20px;
+        gap: 20px;
+    }
+}
+/*----------------------- Nosotros -------------------------*/
+.seccion-nosotros {
+  background: #5a5757;
+  padding: 40px 80px;
+}
+
+/* TITULOS */
+.titulo-nosotros {
+  font-size: 50px;
+  letter-spacing: 10px;
+  font-weight: 900;
+  color: #ffffff;
+  text-align: center;
+}
+.subtitulo-nosotros {
+  color: #ff8a00;
+  
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* DOS COLUMNAS */
+.contenedor-columnas {
+  display: flex;
+  gap: 60px;
+}
+
+/* --- COLUMNA IZQUIERDA --- */
+.columna-historia {
+  flex: 1;
+  background: rgb(252, 251, 251);
+  border-radius: 24px;
+  padding: 35px;
+}
+
+.etiqueta-amarilla {
+  background: #ffc400;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.titulo-historia {
+  font-size: 36px;
+  margin: 15px 0;
+  color: #101d32;
+}
+
+.parrafo {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* --- COLUMNA DERECHA --- */
+
+.columna-fotos {
+  flex: 1;
+  position: relative;
+  height: 500px;
+}
+
+.circulo-fondo {
+  width: 430px;
+  height: 430px;
+  background: #ffc400;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 1;
+}
+
+.foto {
+  position: absolute;
+  width: 260px;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  padding: 6px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.foto1 { 
+    top: 0; 
+    right: 20px; 
+    transform: rotate(5deg); 
+}
+.foto2 { 
+    top: 180px; 
+    left: 10px; 
+    transform: rotate(-5deg); 
+}
+.foto3 { 
+    bottom: 20px; 
+    right: 60px; 
+    transform: rotate(3deg); 
+}
+/*------ pantalla chica -----*/
+@media (max-width: 900px) {
+
+  .bloque-nosotros {
+    padding: 20px 15px;
+  }
+
+  .contenedor-columnas {
+    flex-direction: column;
+  }
+
+  .columna-fotos {
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .circulo-fondo {
+    display: none; 
+  }
+
+  .foto {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    transform: rotate(0deg);
+    width: 100%;
+    max-width: 350px;
+  }
+}
+/*------------------- info y horarios ----------------------*/
+.info-section {
+    background: #222;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 0px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.info-box h4 {
+    color: #ffbe33;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.info-box p {
+    margin-bottom: 8px;
+    color: #bbb;
+}
+
+/*-------------- pie de pagina ---------------------*/
+footer{
+    background: #111;
+    color: #777;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}

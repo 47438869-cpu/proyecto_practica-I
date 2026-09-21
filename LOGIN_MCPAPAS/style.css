@@ -1,0 +1,656 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #030303,
+        #3f3f3f,
+        #000000
+    );
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+
+.contenedor {
+
+    width: 100%;
+    max-width: 1100px;
+
+    min-height: 650px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   LADO IZQUIERDO
+========================= */
+
+.lado-izquierdo {
+
+    width: 45%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #c90039,
+            #97002f
+        );
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 60px;
+}
+
+
+/* Decoración */
+
+.lado-izquierdo::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border: 45px solid #ffc400;
+
+    border-radius: 50%;
+
+    top: 250px;
+    left: -300px;
+
+    transform: rotate(-25deg);
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 60px;
+
+    font-weight: bold;
+
+    font-style: italic;
+
+    color: white;
+}
+
+.logo span {
+
+    color: #ffc400;
+
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+.texto-logo {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 20px;
+
+    color: white;
+
+    font-size: 22px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================
+   PAPAS
+========================= */
+
+.papas {
+
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    z-index: 3;
+}
+
+
+.papas-fritas {
+
+    font-size: 190px;
+
+    line-height: 1;
+
+    filter: drop-shadow(
+        0 15px 10px rgba(0,0,0,0.3)
+    );
+
+}
+
+
+/* Caja */
+
+.caja-papas {
+
+    background: #e4002b;
+
+    color: #ffc400;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    padding: 25px 55px;
+
+    margin-top: -25px;
+
+    border-radius: 10px 10px 30px 30px;
+
+    border: 5px solid #ffc400;
+
+}
+
+
+/* =========================
+   LADO DERECHO
+========================= */
+
+.lado-derecho {
+
+    width: 55%;
+
+    padding: 55px 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =========================
+   ICONO
+========================= */
+
+.icono-login {
+
+    width: 75px;
+    height: 75px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e40046,
+            #a90038
+        );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+
+    font-size: 32px;
+
+    box-shadow:
+        0 8px 20px rgba(200, 0, 50, 0.3);
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   TITULOS
+========================= */
+
+h1 {
+
+    font-size: 30px;
+
+    color: #222;
+
+    font-weight: 700;
+
+}
+
+
+h2 {
+
+    font-size: 45px;
+
+    color: #d5003b;
+
+    margin-top: 5px;
+
+}
+
+
+.subtitulo {
+
+    color: #888;
+
+    margin-top: 8px;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =========================
+   FORMULARIO
+========================= */
+
+form {
+
+    width: 100%;
+
+    max-width: 500px;
+
+}
+
+
+/* Campo */
+
+.campo {
+
+    width: 100%;
+
+    height: 60px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 20px;
+
+    margin-bottom: 18px;
+
+    transition: 0.3s;
+
+    background: #fff;
+}
+
+
+.campo:focus-within {
+
+    border-color: #d5003b;
+
+    box-shadow:
+        0 0 0 3px rgba(213, 0, 59, 0.1);
+
+}
+
+
+.campo i {
+
+    color: #999;
+
+    font-size: 18px;
+
+    margin-right: 15px;
+
+}
+
+
+.campo input {
+
+    border: none;
+
+    outline: none;
+
+    width: 100%;
+
+    font-size: 16px;
+
+    color: #333;
+
+}
+
+
+.campo input::placeholder {
+
+    color: #999;
+
+}
+
+
+.ojo {
+
+    cursor: pointer;
+
+    margin-right: 0 !important;
+
+}
+
+
+/* =========================
+   OLVIDÉ CONTRASEÑA
+========================= */
+
+.opciones {
+
+    text-align: right;
+
+    margin-bottom: 25px;
+}
+
+
+.opciones a {
+
+    color: #c90039;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+form button {
+
+    width: 100%;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e4003b,
+            #bd0037
+        );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 8px 18px rgba(200, 0, 50, 0.25);
+}
+
+
+form button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(200, 0, 50, 0.35);
+}
+
+
+/* =========================
+   SEPARADOR
+========================= */
+
+.separador {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 25px 0;
+}
+
+
+.separador span {
+
+    height: 1px;
+
+    background: #ddd;
+
+    flex: 1;
+
+}
+
+
+.separador p {
+
+    color: #999;
+
+}
+
+
+/* =========================
+   REDES SOCIALES
+========================= */
+
+.redes {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    display: flex;
+
+    gap: 15px;
+}
+
+
+.social {
+
+    flex: 1;
+
+    height: 50px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.social:hover {
+
+    background: #f8f8f8;
+
+    transform: translateY(-2px);
+}
+
+
+.social i {
+
+    margin-right: 8px;
+
+    font-size: 17px;
+}
+
+
+.fa-google {
+
+    color: #db4437;
+
+}
+
+
+.fa-facebook {
+
+    color: #1877f2;
+
+}
+
+
+/* =========================
+   REGISTRO
+========================= */
+
+.registro {
+
+    margin-top: 30px;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+.registro a {
+
+    color: #d0003b;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .contenedor {
+
+        flex-direction: column;
+
+    }
+
+    .lado-izquierdo {
+
+        width: 100%;
+
+        height: 300px;
+
+        padding: 35px;
+
+    }
+
+    .lado-derecho {
+
+        width: 100%;
+
+        padding: 45px 30px;
+
+    }
+
+    .papas {
+
+        display: none;
+
+    }
+
+    .logo {
+
+        font-size: 45px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    body {
+
+        padding: 10px;
+
+    }
+
+    .lado-derecho {
+
+        padding: 35px 20px;
+
+    }
+
+    h1 {
+
+        font-size: 24px;
+
+    }
+
+    h2 {
+
+        font-size: 36px;
+
+    }
+
+    .redes {
+
+        flex-direction: column;
+
+    }
+
+}

@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgba(255, 255, 255, 0.37);
+}
+/* ------------------- Barra superior ----------------------*/
+.barra-superior{
+    background-color: rgb(71, 67, 67);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+.logo{
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+.opciones{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+.opciones a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+}
+/*Ocultar el chekbox*/
+#menu-toggle{
+    display: none;
+}
+.menu-icon{
+    display: none;
+    color: white;
+    cursor: pointer;
+}
+/*------ Pantalla chica - CELULAR --------*/
+@media(max-width: 600px){
+    .menu-icon{
+        display: block;
+    }
+    .opciones{
+        display: none;
+    }
+    #menu-toggle:checked ~ .opciones{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: black;
+        width: 100%;
+        padding: 20px;
+        gap: 20px;
+    }
+}
+/*------------------ Apartado de categorias -----------------*/
+.categorias{
+    text-align: center;
+    padding: 40px 5%;
+}
+.categorias h2{
+    font-size: 38px;
+    margin: 0 0 25px 0;
+    color: rgb(95, 87, 87);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 10px;
+    text-shadow: 0 12px 25px rgba(0, 0, 0, 0.3)
+}
+.contenedor-categorias{
+    background: linear-gradient(135deg, #f5ce50 0%, #ff9d00 100%);
+    border-radius: 32px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    box-shadow: 0 8px 10px rgb(255, 248, 145);
+    border: 3px solid white;
+}
+.categoria{
+    background-color: white;
+    border-radius: 22px;
+    width: 30%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.categoria :hover{
+    transform: translateY(-5px);
+   /*box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);*/
+}
+.icono{
+    width: 100px;
+    height: 70px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.categoria img{
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+.categoria p{
+    margin: 10px 0 0;
+    font-size: 20px;
+}
+
+/*---------------------- APARTADO PRODUCTOS ---------------------------*/
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+    padding: 0 30px;
+}
+.producto{
+    background: rgb(121, 117, 117);
+    border-radius: 25px;
+    box-shadow: 12px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 0;
+}
+.producto{
+    border: 4px solid #fffff1;
+    box-shadow: 0 0 15px rgba(255, 204, 95, 0.795);
+    transition: all 0.3s ease;
+}
+.producto:hover{
+    box-shadow: 0 0 10px rgba(240, 206, 119, 0.8);
+    transform: scale(1.03);
+}
+.producto img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+.info-producto{
+    padding: 15px;
+    color: rgb(5, 5, 5);
+}
+.info-producto h4{
+    margin: 15px 0 5px;
+    font-size: 20px;
+}
+.info-producto p{
+    margin: 5px 0;
+    font-size: 14px;
+    color: #000000;
+}
+.info-producto span{
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(255, 175, 4);
+}
+
+/*------------------- info y horarios ----------------------*/
+.info-section {
+    background: #222;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.info-box h4 {
+    color: #ffbe33;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.info-box p {
+    margin-bottom: 8px;
+    color: #bbb;
+}
+
+/*-------------- pie de pagina ---------------------*/
+footer{
+    background: #111;
+    color: #777;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 1px solid #333;
+}
