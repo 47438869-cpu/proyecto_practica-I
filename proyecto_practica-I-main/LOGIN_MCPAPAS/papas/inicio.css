@@ -1,0 +1,104 @@
+.encabezado {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 40px;
+  z-index: 10;
+}
+.encabezado-logo{
+  color: white;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.encabezado-nav{
+  display: flex;
+  gap: 30px;
+}
+.encabezado-link{
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+.encabezado-link:hover{
+  color: #f4c542;
+}
+.encabezado-acciones{
+  display: flex;
+  gap: 16px;
+}
+.encabezado-icono{
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+/*presentacion del negrocio*/
+.presentacion{
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #1a1a1a;
+  min-height: 600px;
+  overflow: hidden;
+}
+.presentacion-texto{
+  flex: 1;
+  padding: 0 60px;
+  z-index: 2;
+}
+.presentacion-frase{
+  color: white;
+  font-size: 18px;
+  font-style: italic;
+}
+.presentacion-titulo{
+  color: white;
+  font-size: 56px;
+  font-weight: 800;
+  margin: 10px 0;
+}
+.presentacion-descripcion{
+  color: #f4c542;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+.presentacion-boton{
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+/*presentacion del paner curva*/
+.presentacion-panel1 {
+  background: #f4c542;
+  width: 60%;
+  height: 700px;
+  border-radius: 40% 0 0 40% / 55% 0 0 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.presentacion-imagen {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  border: 8px solid white;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0,0,0,0.3);
+}
+.presentacion-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

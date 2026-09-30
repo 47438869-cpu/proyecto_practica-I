@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(88, 81, 81);
+}
+/* ------------------- Barra superior ----------------------*/
+.barra-superior{
+    background-color: rgb(0, 0, 0);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+.logo{
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+.opciones{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+.opciones a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+}
+/*Ocultar el chekbox*/
+#menu-toggle{
+    display: none;
+}
+.menu-icon{
+    display: none;
+    color: white;
+    cursor: pointer;
+}
+/*------ Pantalla chica - CELULAR --------*/
+@media(max-width: 600px){
+    .menu-icon{
+        display: block;
+    }
+    .opciones{
+        display: none;
+    }
+    #menu-toggle:checked ~ .opciones{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: black;
+        width: 100%;
+        padding: 20px;
+        gap: 20px;
+    }
+}
+/*--------------------Bloque Inicio ------------------------*/
+.bloque-inicio{
+    background-color: #fffaf0;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 50px 60px;
+}
+.inicio-texto{
+    flex: 1;
+}
+.titulo-grande{
+    font-size: 70px;
+    font-weight: 900;
+    line-height: 0.9;
+    color: black;
+    margin-bottom: 20px;
+}
+.subtitulo-inicio{
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 30px;
+}
+.boton-inicio{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+.boton{
+    background: #ffc400;
+    color: #101d32;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 900;
+    text-align: center;
+}
+.inicio-foto{
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circulo{
+    width: 400px;
+    height: 400px;
+    background-color: #ffc400;
+    border-radius: 50%;
+    position: absolute;
+    padding: 20px 20px;
+}
+.foto-papas{
+    position: absolute;
+    width: 370px;
+    height: 370px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: white;
+    padding: 6px;
+    transform: rotate(7deg); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+/*------------------- info y horarios ----------------------*/
+.info-section {
+    background: #222;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.info-box h4 {
+    color: #ffbe33;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.info-box p {
+    margin-bottom: 8px;
+    color: #bbb;
+}
+
+/*-------------- pie de pagina ---------------------*/
+footer{
+    background: #111;
+    color: #777;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 1px solid #333;
+}

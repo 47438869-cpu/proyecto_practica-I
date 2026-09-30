@@ -1,0 +1,510 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f6;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   LAYOUT PRINCIPAL
+========================= */
+
+.panel {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #383838, #000000);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+}
+
+.sidebar-logo {
+    font-size: 28px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 50px;
+    padding-left: 10px;
+}
+
+.sidebar-logo span {
+    color: #ffc400;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: 0.25s;
+}
+
+.sidebar-menu a i {
+    width: 20px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.sidebar-menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.sidebar-menu a.activo {
+    background: #ffc400;
+    color: #2b2a2a;
+    font-weight: bold;
+}
+
+.cerrar-sesion {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-size: 15px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 20px;
+    transition: 0.25s;
+}
+
+.cerrar-sesion:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.contenido {
+    flex: 1;
+    padding: 50px 60px;
+}
+
+.contenido h1 {
+    font-size: 30px;
+    color: #222;
+}
+
+.subtitulo-panel {
+    color: #888;
+    margin-top: 8px;
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.tarjetas {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    width: 220px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+.tarjeta i {
+    font-size: 30px;
+    color: #2b2b2b;
+    margin-bottom: 12px;
+}
+
+.tarjeta h3 {
+    font-size: 15px;
+    color: #888;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.tarjeta .valor {
+    font-size: 26px;
+    font-weight: bold;
+    color: #222;
+}
+
+
+/* =========================
+   FILTROS DE PERIODO
+========================= */
+
+.filtros-periodo {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filtros-periodo a {
+    text-decoration: none;
+    color: #888;
+    background: white;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    transition: 0.25s;
+}
+
+.filtros-periodo a:hover {
+    border-color: #d5003b;
+    color: #d5003b;
+}
+
+.filtros-periodo a.activo {
+    background: #d5003b;
+    color: white;
+    border-color: #d5003b;
+}
+
+
+/* =========================
+   TARJETA DESTACADA
+========================= */
+
+.tarjeta-destacada {
+    border: 2px solid #ffc400;
+}
+
+
+
+
+/* =========================
+   TABLA DE DATOS
+========================= */
+
+.titulo-tabla {
+    font-size: 20px;
+    color: #222;
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+
+.tabla-datos {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.tabla-datos th {
+    text-align: left;
+    background: #f8f8fa;
+    color: #888;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 14px 20px;
+    text-transform: uppercase;
+}
+
+.tabla-datos td {
+    padding: 14px 20px;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    color: #333;
+}
+
+.tabla-datos .sin-datos {
+    text-align: center;
+    color: #999;
+    padding: 30px;
+}
+
+.etiqueta {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.etiqueta-verde {
+    background: #e3f7e9;
+    color: #1a8a4a;
+}
+
+.etiqueta-roja {
+    background: #fde8ea;
+    color: #d5003b;
+}
+
+
+/* =========================
+   ENCABEZADO PRODUCTOS
+========================= */
+
+.encabezado-productos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.boton-nuevo {
+    background: linear-gradient(135deg, #e4003b, #bd0037);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 8px 18px rgba(200, 0, 50, 0.25);
+    transition: 0.3s;
+}
+
+.boton-nuevo:hover {
+    transform: translateY(-2px);
+}
+
+.mensaje-ok {
+    background: #e3f7e9;
+    color: #1a8a4a;
+    padding: 14px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   ACCIONES EN TABLA
+========================= */
+
+.acciones {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-icono {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #555;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.btn-icono:hover {
+    background: #f4f4f6;
+}
+
+.btn-eliminar:hover {
+    background: #fde8ea;
+    color: #d5003b;
+    border-color: #d5003b;
+}
+
+
+/* =========================
+   MODALES
+========================= */
+
+.modal-fondo {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modal-caja {
+    background: white;
+    border-radius: 16px;
+    padding: 35px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.modal-caja h2 {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.modal-nombre-producto {
+    color: #888;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.modal-caja form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.modal-caja label {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 6px;
+    margin-top: 14px;
+}
+
+.modal-caja input {
+    height: 46px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 0 15px;
+    font-size: 14px;
+    outline: none;
+}
+
+.modal-caja input:focus {
+    border-color: #d5003b;
+}
+
+.modal-botones {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.boton-cancelar {
+    flex: 1;
+    height: 46px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.boton-guardar {
+    flex: 1;
+    height: 46px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #e4003b, #bd0037);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+/* =========================
+   IMÁGENES DE PRODUCTOS
+========================= */
+
+.miniatura-producto {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.miniatura-vacia {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    background: #f4f4f6;
+    color: #bbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.miniatura-modal {
+    display: none;
+    width: 100%;
+    max-height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .panel {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    .sidebar-logo {
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    .sidebar-menu {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .sidebar-menu a span {
+        display: none;
+    }
+
+    .cerrar-sesion {
+        margin-top: 0;
+        border-top: none;
+        padding-top: 14px;
+    }
+
+    .contenido {
+        padding: 30px 20px;
+    }
+}
