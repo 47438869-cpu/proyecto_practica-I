@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #2b2b2e;
+  color: #f5f5f5;
+  font-family: sans-serif;
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+/*-------------- Barra Arriba --------------*/
+  .app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: linear-gradient(130deg, hsl(54, 100%, 65%), #ff9741);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+/* botones de accion (carrito, seccion)*/
+.boton-accion {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.icon-boton{
+  background: #ffffff;
+  border-radius: 30%;
+  border: 4px solid #fffefb;
+  cursor: pointer;
+  position: relative;
+  padding: 2px;
+}
+.icon-img{
+  width: 22x;
+  height: 22px;
+  display: block;
+}
+/* Nombre,logo,eslogan del negocio*/
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.logo-icono{
+  width: 65px;
+  height: 55px;
+  margin-top: -7px;
+}
+.logo-texto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.marca {
+  font-weight: 800;
+  font-size: 32px;
+  
+}
+.eslogan {
+  font-size: 11px;
+  color: #fcfcfc;
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
+/*------------ Barra de Busqueda -----------*/
+.search-row {
+  padding: 35px 50px 30px;
+}
+.search-row input {
+  width: 100%;
+  background: #ffffff;
+  border: 4px solid #fce945;
+  border-radius: 14px;
+  padding: 10px 14px;
+  color: #ffffff;
+  outline: none;
+  font-size: 14px;
+}
+/*--------------- Categorias ---------------*/
+.contenedor-categorias{
+  background: linear-gradient(120deg, hsl(49, 100%, 63%), #ff7707);
+  border-radius: 24px;
+  padding: 6px 5px;
+  margin: 15px 50px;
+}
+.categorias{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 5px 15px;
+  flex-wrap: wrap;
+}
+.categoria{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  cursor: pointer;
+  background: white;
+  border-radius: 16px;
+  padding: 6px 4px;
+}
+.categoria-texto{
+  font-size: 12px;
+  color: #2b2b2e;
+  letter-spacing: 3px;
+}
+.categoria-icono{
+  width: 90px;
+  height: 90px;
+  border-radius: 30%;
+  background: rgb(231, 231, 231);
+  border: 3px solid rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.categoria:hover .categoria-icono {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+.categoria-icono img{
+  width: 70px;
+  height: 60px;
+  object-fit: cover;
+}
+/* Marca de Categoria */
+.categoria.activa .categoria-texto {
+  color: #2b2b2e;
+  font-weight: 700;
+}
+/*------------------ Productos ------------------*/
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px 30px;
+}
+.producto {
+/*border: 3px solid #fdea40;*/
+  background: white;
+  border: 3px solid transparent;
+  border-radius: 16px;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(180deg, #ffd931, #ff740a) border-box;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.producto-img {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.producto-img img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  display: block;
+}
+.producto-fav {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+.producto-nombre {
+  font-size: 15px;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+.producto-desc {
+  font-size: 12px;
+  color: #8a8a8a;
+  margin-bottom: 10px;
+}
+.producto-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.producto-precio {
+  font-weight: 700;
+  font-size: 15px;
+  color: #1a1a1a;
+}
+.producto-add {
+  background: #f4832a;
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+}
